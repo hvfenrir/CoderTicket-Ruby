@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'events#index'
-
+  resources :users do
+    resources :events
+  end
   resources :events do
     resources :tickets
   end

@@ -1,0 +1,16 @@
+<div class="form_create_event" style="padding-top: 80px">
+<%= simple_form_for @event do |f| %>
+<%= f.input :name %>
+<%= f.input :extended_html_description %>
+<%= f.input :hero_image_url %>
+<%= f.input :starts_at %>
+<%= f.input :ends_at %>
+<%= f.input :venue_id do %>     
+  <%= f.select :venue_id, Region.all.map {|f| [f.name, f.id] }, label: "recipient", include_blank: true %>
+<% end %> 
+<%= f.input :category_id do %>     
+  <%= f.select :category_id, Category.all.map {|f| [f.name, f.id] }, label: "recipient", include_blank: true %>
+<% end %> 
+<%= f.submit %>
+<% end %>
+</div>

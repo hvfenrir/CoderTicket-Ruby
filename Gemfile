@@ -32,7 +32,7 @@ gem 'quiet_assets'
 gem 'better_errors', group: :development
 gem 'font-awesome-rails'
 gem 'font-kit-rails', '~> 1.2.0'
-
+gem 'devise'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -42,6 +42,8 @@ gem 'font-kit-rails', '~> 1.2.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails'
+   gem 'factory_girl_rails'
 end
 
 group :development do
@@ -50,5 +52,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'guard-rspec', require: false
 end
 
